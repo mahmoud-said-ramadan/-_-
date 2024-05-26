@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeTaskManager()">&times;</span>
+            <h2>Task Manager</h2>
+            <ul id="taskManagerList"></ul>
+            <input type="text" id="taskManagerInput" placeholder="Add new task...">
+            <button onclick="addTaskToManager()">Add Task</button>
+            <button onclick="deleteCompletedTasks()">Delete Completed</button>
+        </div>
+    </div>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <input type="text" id="taskInput" placeholder="Click to manage tasks..." onclick="openTaskManager()">
+        <ul id="taskList"></ul>
+    </div>
+    
+    <!-- Popup modal for editing tasks -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEditModal()">&times;</span>
+            <h2>Edit Task</h2>
+            <input type="text" id="editTaskInput" placeholder="Edit task...">
+            <button onclick="saveEditedTask()">Save</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
